@@ -1,5 +1,9 @@
 [package]
 name = "gatekeeper-core"
+authors = ["Mary Strodl <mstrodl@csh.rit.edu>"]
+description = "Library for authenticating gatekeeper tags"
+repository = "https://github.com/ComputerScienceHouse/gatekeeper-core"
+license = "MIT"
 version = "0.1.0"
 edition = "2021"
 
