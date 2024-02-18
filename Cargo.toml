@@ -1,0 +1,13 @@
+[package]
+name = "gatekeeper-core"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+apdu-core = { version = "0.3.0", features = ["longer_payloads"] }
+freefare-sys = "0.2.0"
+libc = "0.2.153"
+log = "0.4.20"
+nfc-sys = "0.1.5"
+openssl = "0.10.63"
+rand = "0.8.5"
