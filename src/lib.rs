@@ -34,6 +34,8 @@ impl Display for NfcError {
   }
 }
 
+impl std::error::Error for NfcError {}
+
 #[derive(Debug)]
 pub enum NfcError {
   // SendMismatch,
