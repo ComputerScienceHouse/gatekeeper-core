@@ -4,7 +4,7 @@ authors = ["Mary Strodl <mstrodl@csh.rit.edu>"]
 description = "Library for authenticating gatekeeper tags"
 repository = "https://github.com/ComputerScienceHouse/gatekeeper-core"
 license = "MIT"
-version = "0.2.0"
+version = "0.2.1"
 edition = "2021"
 
 [dependencies]

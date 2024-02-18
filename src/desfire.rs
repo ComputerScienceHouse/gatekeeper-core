@@ -192,6 +192,12 @@ impl<'device> NfcTag for DesfireNfcTag<'device> {
       | ((signature_buf[2] as usize) << 8)
       | (signature_buf[3] as usize);
 
+    // Important, prevents an out of bounds write:
+    if sig_length > self.realm.desfire_signing_public_key.size() {
+      log::debug!("Signature length was bigger than expected? This probably indicates a bad card");
+      return Err(NfcError::CommunicationError);
+    }
+
     if unsafe {
       mifare_desfire_read_data_ex(
         self.tag,
